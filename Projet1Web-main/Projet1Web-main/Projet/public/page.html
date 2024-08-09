@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Méta-information de la page -->
+    <meta charset="utf-8">
+    <title>Produit</title>
+
+    <!-- Liens vers les feuilles de style -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+
+  </head>
+  <body>
+
+    <!-- Section principale de la page -->
+    <main>
+
+      <!-- Conteneur de droite -->
+      <div class="droite">
+        <!-- Section du formulaire -->
+        <section id="formulaire">
+          <!-- Titre du formulaire -->
+          <h1 id="titreDroite" class="title is-1 has-text-weight-bold"> Formulaire d'enregistrement d'un Utilisateur </h1>
+
+          <!-- Formulaire -->
+          <form id="questionnaire">
+            <span id="erreurNom">Erreur Nom doit être un string</span>
+            <div>
+              <label>Nom :</label>
+              <input type="text" required placeholder="nom" name="nom" id="nom">
+            </div>
+            <span id="erreurPrenom">Erreur Prenom doit être un string</span>
+            <div>
+              <label>Prénom :</label>
+              <input type="text" required placeholder="prenom" name="prenom" id="prenom">
+            </div>
+            <span id="erreurAge">Erreur âge doit être réel</span>
+            <div>
+              <label>Âge :</label>
+              <input type="text" placeholder="age" name="age" id="age">
+            </div>
+            <span id="erreurEmail">Erreur Email doit contenir un @</span>
+            <div>
+              <label>Email :</label>
+              <input type="text" required placeholder="email" name="email" id="email">
+            </div>
+            <span id="erreurNum">Erreur numero de telephone ne doit pas contenir de string</span>
+            <div>
+              <label>Numéro de Téléphone :</label>
+              <input type="text" required placeholder="numeroTelephone" name="numeroTelephone" id="numeroTelephone">
+            </div>
+          </form>
+
+          <!-- Section des boutons -->
+          <section id="boutons">
+            <button type="button" id="ajouter" class="button is-primary">Ajouter</button>
+            <button type="button" id="supprimer" class="button is-danger">Supprimer</button>
+            <button type="button" id="ajour" class="button is-success">Mettre à jour</button>
+          </section>
+
+          <!-- Sélecteur de pages -->
+          <select name="page" id="selectPage" onchange="chargerPages()">
+            <option name="page1">Page 1</option>
+            <!-- Options seront ajoutées dynamiquement par JavaScript -->
+          </select>
+
+          <!-- Barre de recherche -->
+          <div>
+            <input type="text" placeholder="Rechercher" id="champRecherche">
+            <button type="button" id="btnRechercher" class="button is-info" onclick="effectuerRecherche()">Rechercher</button>
+          </div>
+
+          <!-- Section des résultats -->
+          <section id="resultats">
+            <table id="tableauResultats">
+              <tr>
+                <th class="title is-5 has-text-weight-bold">&#8681; ID </th>
+                <th class="title is-5 has-text-weight-bold">&#8681; Nom </th>
+                <th class="title is-5 has-text-weight-bold">&#8681; Prénom</th>
+                <th class="title is-5 has-text-weight-bold">&#8681; Âge</th>
+                <th class="title is-5 has-text-weight-bold">&#8681; Email</th>
+                <th class="title is-5 has-text-weight-bold">&#8681; Numéro de Téléphone</th>
+                <th class="title is-5 has-text-weight-bold">&#8681; Supprimer</th>
+                <th class="title is-5 has-text-weight-bold">&#8681; Mettre à jour</th>
+              </tr>
+            </table>
+          </section>
+
+        </section>
+      </div>
+
+    </main>
+
+    <!-- Pied de page de la page, ne comprenant que le copyright -->
+    <footer id="fp2">
+      <p>Copyright 2023</p>
+    </footer>
+
+    <!-- Appel du script JavaScript -->
+    <script src="script.js"></script>
+
+  </body>
+</html>
