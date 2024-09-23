@@ -1,0 +1,60 @@
+.container{
+  width: 100%; /*conteneur prend tt la page */
+  height: 100vh;
+  display: flex ; 
+  align-items: center; /*je place au milieu calcu en hauteur*/
+  justify-content: center; /* en largeur */
+  background: linear-gradient(140deg, rgb(160, 221, 234),rgb(255, 144, 144)); /*effet blanc un coté gris de l'autre */
+  
+}
+
+.calculatrice{
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  
+}
+
+form input {
+  border: none;  /*on enleve les bordure autour input bouton et input */
+  border-radius: 10px;
+
+  background-color: rgb(168, 254, 217);
+  color: black;
+  font-weight: bolder;
+  cursor: pointer;
+
+  outline: 0;
+  width: 60px; 
+  height: 60px;
+  font-size: 16px;
+  margin:2px;
+}
+
+form input[type="button"]:hover{
+  background-color: blue; /*arriere plan au clique bleu*/
+}
+
+form .affichage{
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 0px 15px 0px;
+}
+
+/* apparaitre la barre au milieu et qui longe*/
+form .affichage input {
+  text-align: right;
+  flex:1;
+  font-size: 40px;
+  padding: 5px 10px;
+  background-color: rgb(222, 168, 251);
+}
+
+/*taille bouton */
+form input.egale{
+  width: 187px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 228, 165);
+  font-weight:900px;
+  font-size:20px
+}
